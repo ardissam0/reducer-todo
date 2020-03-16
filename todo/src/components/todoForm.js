@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export function TodoForm (props) {
     const [form, setForm] = useState('')
     return (
-        <form onSubmit={(event) = > {
+        <form onSubmit={(event) => {
             event.preventDefault()
             props.addTodo(form)
             setForm('')
@@ -17,5 +17,5 @@ export function TodoForm (props) {
             }} />
             <button type='submit'>Add</button>
         </form>
-    );
-};
+    )
+}

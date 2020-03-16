@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import { TodoForm } from './components/todoForm';
 import { TodoList } from './components/todoList';
-import { intialState, reducer } from './reducers/reducer';
+import { initialState, reducer } from './Reducers/reducer';
 import './App.css';
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, intialState)
+  const [state, dispatch] = useReducer(reducer, initialState)
   console.log(state)
   const addTodo = (input) => {
     const newTodo = {
@@ -28,10 +28,10 @@ function App() {
     <div className="App">
      <TodoList state={state} handleCompleted={handleCompleted} />
      <TodoForm addTodo={addTodo} />
-     <button onClick={(event) => 
-     event.preventDefault(
-       clearCompleted()
-     )}>Clear</button>
+     <button onClick={(event) => {
+     event.preventDefault()
+     clearCompleted()
+     }}>Clear</button>
     </div>
   );
 }

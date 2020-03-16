@@ -1,8 +1,10 @@
-export const initialState = [{
+export const initialState = [
+    {
     todo: '',
     completed: false,
     id: Math.random()
-}]
+    }
+]
 
 export function reducer(state, action) {
     switch(action.type) {
@@ -17,10 +19,10 @@ export function reducer(state, action) {
                     {...item, completed: !item.completed} :
                     item
                 })
-                case "CLEAR_COMPLETED_TODO" : 
+                case "CLEAR_COMPLETED_TODO": 
                 return state.filter((item) => !item.completed)
 
                 default:
                     return state
     }
-};
+}
