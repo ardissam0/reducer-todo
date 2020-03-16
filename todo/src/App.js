@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
+import { TodoForm } from './components/todoForm';
+import { TodoList } from './components/todoList';
+import { intialState, reducer } from './reducers/reducer';
 import './App.css';
 
 function App() {
   const [state, dispatch] = useReducer(reducer, intialState)
   console.log(state)
-  const addTodo = {input} => {
+  const addTodo = (input) => {
     const newTodo = {
       todo: input,
       completed: false,
@@ -14,11 +16,11 @@ function App() {
     dispatch({type: 'ADD_TODO', payload: newTodo})
   }
 
-  const handleCompleted =(id) => {
+  const handleCompleted = (id) => {
     dispatch({type: 'COMPLETED_TODO', payload: id})
   }
   
-  const clearCompleted = (id) => {
+  const clearCompleted = () => {
     dispatch({type: 'CLEAR_COMPLETED_TODO'})
   }
   
