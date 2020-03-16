@@ -26,8 +26,9 @@ function App() {
   
   return (
     <div className="App">
-     <TodoList state={state} handleCompleted={handleCompleted} />
+      <h2>Welcome, add a Todo!</h2>
      <TodoForm addTodo={addTodo} />
+     <TodoList state={state} handleCompleted={handleCompleted} />
      <button onClick={(event) => {
      event.preventDefault()
      clearCompleted()

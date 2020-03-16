@@ -2,12 +2,12 @@ import React from 'react';
 
 export function Todo(props) {
     return (
-        <div>
-            <h2 className={props.item.completed ? 'complete' : ''}
-            onclick={(event) => {
+        <div
+         className={`Todo${props.item.completed ? ' completed' : ''}`}
+            onClick={(event) => {
                 event.preventDefault()
                 props.handleCompleted(props.item.id)
-            }}> {props.item.todo}</h2>
+            }}> <p>{props.item.todo}</p>
         </div>
 
     )
