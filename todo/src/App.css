@@ -1,3 +1,5 @@
+/* styled components to create line-through on completed and made it pretty */
+
 .App {
   background-color: peachpuff;
   width: 40%;
@@ -9,6 +11,7 @@
 p {
   font-weight: bold;
   color: #3C4D80;
+  cursor: pointer;
 }
 
 .completed {
@@ -25,6 +28,7 @@ button:hover {
   color: peachpuff;
   background-color: #3C4D80;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .top {

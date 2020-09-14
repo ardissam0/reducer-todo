@@ -1,3 +1,5 @@
+
+//imported all neccessary imports
 import React, { useReducer } from 'react';
 import { TodoForm } from './components/todoForm';
 import { TodoList } from './components/todoList';
@@ -15,15 +17,15 @@ function App() {
     }
     dispatch({type: 'ADD_TODO', payload: newTodo})
   }
-
+  //created handle function
   const handleCompleted = (id) => {
     dispatch({type: 'COMPLETED_TODO', payload: id})
   }
-  
+  //used to clear completed tasks
   const clearCompleted = () => {
     dispatch({type: 'CLEAR_COMPLETED_TODO'})
   }
-  
+  //returned todoForm and TodoList component and a button to clear the tasks using the clearCompleted function
   return (
     <div className="App">
       <h2>Welcome, add a Todo!</h2>

@@ -1,3 +1,5 @@
+//Created the completed onClick event here
+
 import React from 'react';
 
 export function Todo(props) {
