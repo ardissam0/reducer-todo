@@ -1,3 +1,4 @@
+//created a reducer function
 export const initialState = [
     {
     todo: '',
