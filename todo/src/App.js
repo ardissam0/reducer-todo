@@ -28,7 +28,7 @@ function App() {
   //returned todoForm and TodoList component and a button to clear the tasks using the clearCompleted function
   return (
     <div className="App">
-      <h2>Welcome, add a Todo!</h2>
+      <h2>Todo App</h2>
      <TodoForm addTodo={addTodo} />
      <TodoList state={state} handleCompleted={handleCompleted} />
      <button onClick={(event) => {
